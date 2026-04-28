@@ -1,0 +1,13 @@
+<div class="window">
+    <form>
+        @for (field of fields(); track $index) {
+        <div class="field">
+            <label [for]="field.for">{{field.name}}</label>
+            <input [type]="field.type" [id]="field.id" [placeholder]="field.placeholder">
+        </div>
+        }
+        <div class="container_button">
+            <button class="button" type="submit">Enviar</button>
+        </div>
+    </form>
+</div>

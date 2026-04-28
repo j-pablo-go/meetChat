@@ -1,0 +1,39 @@
+ @use '../../../app/styles/mixins.scss' as m;
+ @use '../../../app/styles/style.variables.scss' as v;
+
+ main {
+     height: 100%;
+ }
+
+
+ .container {
+     @include m.flex-center;
+     width: 100%;
+     font-size: 1.5rem;
+     color: v.$blueSlate;
+     border-radius: 2rem;
+ }
+
+
+ section {
+     padding: 2rem 5rem;
+ }
+
+
+ .img_section,
+ p {
+     width: 100%;
+     margin-bottom: 8rem;
+
+
+     .logo_meetchat {
+         display: block;
+         margin: 0 auto;
+         width: 70vw;
+
+         @include m.smartphone-up {
+            width: 60vw;
+         }
+     }
+
+ }

@@ -1,0 +1,36 @@
+@use '../../../app/styles/mixins.scss' as m;
+@use '../../../app/styles/style.variables.scss' as v;
+
+nav {
+    position: relative;
+
+    @include m.smartphone-up {
+        display: flex;
+        justify-content: space-evenly;
+        margin-right: 2vw;
+    }
+}
+
+.link {
+    @include m.flex-center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: v.$slateGrey;
+    cursor: pointer;
+    margin-bottom: 1rem;
+
+
+    @include m.smartphone-up {
+        margin: 1rem;
+        text-decoration: none;
+        color: v.$slateGrey;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+}
+
+.active-link {
+    color: v.$slateGrey;
+    border-bottom: 2px solid v.$slateGrey;
+    font-weight: bold;
+}

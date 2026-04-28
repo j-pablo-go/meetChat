@@ -1,0 +1,13 @@
+<nav>
+    @for (link of links(); track $index) {
+        <div>
+            <a class="link" [routerLink]="link.path" routerLinkActive="active-link" [routerLinkActiveOptions]=" {exact: link.exact} ">{{link.name}}</a>
+        </div>
+    }
+    <div (click)="ui.setForm()">
+        <a type="button" class="link">contacto</a>
+    </div>
+</nav>
+@if (ui.showForm()) {
+<app-form></app-form>
+}

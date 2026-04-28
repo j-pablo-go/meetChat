@@ -1,0 +1,19 @@
+@use '../../../app/styles/style.variables.scss' as v;
+@use '../../../app/styles/mixins.scss' as m;
+
+
+main {
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    @include m.flex-center;
+    margin: 2rem;
+}
+
+.date {
+    border: 5px solid v.$slateGrey;
+    padding: 1rem;
+    color: v.$blueSlate;
+}

@@ -1,0 +1,24 @@
+@mixin smartphone-up() {
+    @media (min-width: 720px) {
+        @content
+    }
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin text-style($color: #000, $size: 1vw) {
+    color: $color;
+    font-size: $size;
+    line-height: 1.5;
+}
+
+@mixin custom-placeholder($color) {
+    &::placeholder {
+        color: $color;
+        @content;
+    }
+}

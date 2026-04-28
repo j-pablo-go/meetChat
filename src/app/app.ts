@@ -1,12 +1,22 @@
-import { Component, signal } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Header } from "./component/header/header";
+import { Footer } from "./component/footer/footer";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, Header, Footer],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.scss'
 })
 export class App {
-  protected readonly title = signal('portfolio_Pablo');
+
+  isScrolled = false;
+
+    @HostListener('window:scroll', [])
+    onWindowScroll() {
+      // Si el scroll vertical es mayor a 10px, activamos la sombra
+      this.isScrolled = window.scrollY > 10;
+    }
+
 }

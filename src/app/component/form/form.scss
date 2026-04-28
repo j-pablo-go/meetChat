@@ -1,0 +1,73 @@
+@use '../../../app/styles/style.variables.scss' as v;
+@use '../../../app/styles/mixins.scss' as m;
+
+.window {
+    display: flex;
+    font-size: 2rem;
+    position: absolute;
+    width: 60%;
+    top: 100%;
+    margin: 5px auto;
+    left: 0;
+    right: 0;
+
+    @include m.smartphone-up {
+        display: flex;
+        font-size: 2rem;
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        margin: 5px 0;
+        right: 0;
+    }
+
+
+}
+
+
+form {
+    background-color: v.$celadon;
+    width: 100%;
+    margin: 0 auto;
+
+    .container_button {
+        @include m.flex-center();
+        width: cover;
+        padding: 20px;
+
+        .button {
+            @include m.text-style(v.$white);
+            background-color: v.$slateGrey;
+            border: none;
+            border-radius: 10px;
+            padding: 1rem 1.5rem;
+            font-size: 1rem;
+        }
+    }
+
+    @include m.smartphone-up {
+        background-color: v.$celadon;
+        margin-left: 70%;
+    }
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    color: v.$slateGrey;
+    margin: 2vw auto;
+
+
+    @include m.smartphone-up {
+        color: v.$slateGrey;
+        margin: 2vw auto;
+        gap: 1vh;
+    }
+
+    input {
+        border: none;
+
+        @include m.custom-placeholder(v.$celadon) {}
+    }
+}
