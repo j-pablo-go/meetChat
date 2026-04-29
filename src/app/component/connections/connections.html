@@ -11,7 +11,7 @@
       <tbody>
         @for (row of rows(); track $index) {
           <tr class="row">
-            <td class="date" [attr.data-label]="columns()[0].column">{{row.name}}</td>
+            <td class="date cell_name" [attr.data-label]="columns()[0].column">{{row.name}}</td>
             <td class="date" [attr.data-label]="columns()[1].column">{{row.members}}</td>
             <td class="date" [attr.data-label]="columns()[2].column">{{row.since}}</td>
             <td class="date" [attr.data-label]="columns()[3].column">{{row.master}}</td>
@@ -20,4 +20,12 @@
       </tbody>
     </table>
   </div>
+  @for (row of rows(); track $index) {
+    <div class="information">
+      <h3 class="title">{{row.name}}</h3>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente voluptatem similique dolores doloremque quisquam maxime aperiam voluptatibus quo quod beatae accusamus est, illo atque totam facilis quidem id modi rem?
+      </p>
+    </div>
+  }
 </main>

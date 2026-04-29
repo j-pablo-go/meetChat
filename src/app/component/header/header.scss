@@ -20,7 +20,7 @@
     align-items: center;
     background-color: variables.$celadon;
     width: 100%;
-    
+
 }
 
 .logo {
@@ -36,5 +36,11 @@
         align-items: center;
         justify-content: space-between;
         background-color: variables.$celadon;
+    }
+
+    .logo {
+        width: 20vw;
+        margin: 2vh 3vw;
+        cursor: pointer;
     }
 }
