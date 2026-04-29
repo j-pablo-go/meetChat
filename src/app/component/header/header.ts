@@ -9,14 +9,10 @@ import { Navbar } from '../navbar/navbar';
   templateUrl: './header.html',
   styleUrl: './header.scss'
 })
-export class Header implements OnInit {
+export class Header {
   public ui = inject(Ui);
 
-  isScrolled = false;
 
-  ngOnInit(): void {
-
-  }
 
 
 

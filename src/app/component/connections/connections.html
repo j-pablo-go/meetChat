@@ -1,18 +1,23 @@
 <main>
-    <div class="container">
-
-        <table>
-            @for (column of columns(); track $index) {
-                <th class="date">{{column.column}}</th>
-            }
-            @for (row of rows(); track $index) {
-            <tr class="row">
-                <td class="date">{{row.name}}</td>
-                <td class="date">{{row.members}}</td>
-                <td class="date">{{row.since}}</td>
-                <td class="date">{{row.master}}</td>
-            </tr>
-            }
-        </table>
-    </div>
+  <div class="container">
+    <table>
+      <thead>
+        <tr>
+          @for (column of columns(); track $index) {
+            <th class="date_head">{{column.column}}</th>
+          }
+        </tr>
+      </thead>
+      <tbody>
+        @for (row of rows(); track $index) {
+          <tr class="row">
+            <td class="date" [attr.data-label]="columns()[0].column">{{row.name}}</td>
+            <td class="date" [attr.data-label]="columns()[1].column">{{row.members}}</td>
+            <td class="date" [attr.data-label]="columns()[2].column">{{row.since}}</td>
+            <td class="date" [attr.data-label]="columns()[3].column">{{row.master}}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
 </main>
