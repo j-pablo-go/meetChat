@@ -1,11 +1,14 @@
 <nav>
-    @for (link of links(); track $index) {
+    <div class="container_link">
+        @for (link of links(); track $index) {
         <div>
-            <a class="link" [routerLink]="link.path" routerLinkActive="active-link" [routerLinkActiveOptions]=" {exact: link.exact} ">{{link.name}}</a>
+            <a class="link" [class.hide_second_mobile]="$index === 1" [routerLink]="link.path" routerLinkActive="active-link"
+                [routerLinkActiveOptions]=" {exact: link.exact} ">{{link.name}}</a>
         </div>
-    }
-    <div (click)="ui.setForm()">
-        <a type="button" class="link">contacto</a>
+        }
+        <div (click)="ui.setForm()">
+            <a type="button" class="link">contacto</a>
+        </div>
     </div>
 </nav>
 @if (ui.showForm()) {
